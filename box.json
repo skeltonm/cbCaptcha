@@ -1,0 +1,23 @@
+{
+	"name": "ContentBox Captcha Module",
+	"version": "1.0.0",
+	"author": "Mark Skelton",
+	"location": "https://github.com/skeltonm/cbCaptcha/archive/master.zip",
+	"createPackageDirectory": true,
+	"homepage": "https://github.com/skeltonm/cbCaptcha",
+	"repository": {
+		"type": "git",
+		"URL": "https://github.com/skeltonm/cbCaptcha.git"
+	},
+	"slug": "cbCaptcha",
+	"shortDescription": "Generates a captcha image for your website's comment forms",
+	"type": "contentbox-modules",
+	"keywords": "Captcha",
+	"private": false,
+	"license": [
+		{
+			"type": "Apache2",
+			"URL": "https://www.apache.org/licenses/LICENSE-2.0"
+		}
+	]
+}
