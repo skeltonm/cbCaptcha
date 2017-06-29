@@ -25,16 +25,20 @@ component extends="coldbox.system.Interceptor" {
 	* this needs to be added to comment form
 	*/
 	function cbui_postCommentForm( event, interceptData ){
-		interceptData.commentForm &= captchaService.display() & "
-			#htmlHelper.textField(
-				name			= "captchacode",
-				label			= "Enter the security code shown above:",
-				required		= "required",
-				class			= "form-control",
-				groupWrapper	= "div class=form-group",
-				size			= "50"
-			)#
-		";
+		var prc = event.getCollection( private = true );
+
+		if( !prc.oCurrentAuthor.isLoggedIn() ){
+			interceptData.commentForm &= captchaService.display() & "
+				#htmlHelper.textField(
+					name			= "captchacode",
+					label			= "Enter the security code shown above:",
+					required		= "required",
+					class			= "form-control",
+					groupWrapper	= "div class=form-group",
+					size			= "50"
+				)#
+			";
+		}
 	}
 
 	/**
